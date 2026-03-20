@@ -1,3 +1,8 @@
+package service;
+
+import model.Alumno;
+import model.Profesor;
+
 import java.util.ArrayList;
 
 public class Curso {
@@ -30,15 +35,15 @@ public class Curso {
         System.out.println("CURSO: " + nombre);
 
         for (Alumno a : alumnos) {
-            System.out.println("Alumno: " + a.getNombre());
+            System.out.println("model.Alumno: " + a.getNombre());
         }
 
         for (Asignatura as : asignaturas) {
-            System.out.println("Asignatura: " + as.getNombre());
+            System.out.println("service.Asignatura: " + as.getNombre());
         }
 
         for (Profesor p : profesores) {
-            System.out.println("Profesor: " + p.getNombre());
+            System.out.println("model.Profesor: " + p.getNombre());
         }
     }
 }

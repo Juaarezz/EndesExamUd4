@@ -1,3 +1,8 @@
+package service;
+
+import model.Profesor;
+import model.Alumno;
+
 public class Matricula {
 
     private Alumno alumno;

@@ -1,3 +1,8 @@
+package service;
+
+import model.Alumno;
+import model.Profesor;
+
 import java.util.ArrayList;
 
 public class GestorMatriculas {

@@ -1,3 +1,7 @@
+package model;
+
+import service.Matricula;
+
 import java.util.ArrayList;
 
 public class Alumno {
@@ -41,11 +45,11 @@ public class Alumno {
     }
 
     public void mostrarDatos() {
-        System.out.println("Alumno: " + nombre);
+        System.out.println("model.Alumno: " + nombre);
 
         for (Matricula m : matriculas) {
-            System.out.println("Asignatura: " + m.getAlumno().getNombre() +
-                    " Profesor: " + m.getProfesor().getNombre() +
+            System.out.println("service.Asignatura: " + m.getAlumno().getNombre() +
+                    " model.Profesor: " + m.getProfesor().getNombre() +
                     " Nota: " + m.getNota());
         }
     }

@@ -1,3 +1,5 @@
+package model;
+
 public class Profesor {
 
     private String nombre;
@@ -25,6 +27,6 @@ public class Profesor {
     }
 
     public void mostrar() {
-        System.out.println("Profesor: " + nombre + " - " + especialidad);
+        System.out.println("model.Profesor: " + nombre + " - " + especialidad);
     }
 }
