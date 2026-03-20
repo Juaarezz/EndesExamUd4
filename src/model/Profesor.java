@@ -1,19 +1,20 @@
 package model;
 
-public class Profesor {
+public class Profesor extends Persona {
 
-    private String nombre;
     private String especialidad;
 
     public Profesor(String nombre, String especialidad) {
-        this.nombre = nombre;
+        super(nombre);
         this.especialidad = especialidad;
     }
 
+    @Override
     public String getNombre() {
         return nombre;
     }
 
+    @Override
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -27,6 +28,6 @@ public class Profesor {
     }
 
     public void mostrar() {
-        System.out.println("model.Profesor: " + nombre + " - " + especialidad);
+        System.out.println("Profesor: " + nombre + " - " + especialidad);
     }
 }

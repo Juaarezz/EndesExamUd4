@@ -1,4 +1,5 @@
 import model.Alumno;
+import model.Persona;
 import model.Profesor;
 import service.Asignatura;
 import service.Curso;
@@ -10,27 +11,27 @@ public class Main {
 
         Curso curso = new Curso("1 DAM");
 
-        Alumno a1 = new Alumno("Carlos", 20);
-        Alumno a2 = new Alumno("Ana", 22);
+        Persona a1 = new Alumno("Carlos", 20);
+        Persona a2 = new Alumno("Ana", 22);
 
-        Profesor p1 = new Profesor("Juan", "Matematicas");
-        Profesor p2 = new Profesor("Laura", "Programacion");
+        Persona p1 = new Profesor("Juan", "Matematicas");
+        Persona p2 = new Profesor("Laura", "Programacion");
 
         Asignatura as1 = new Asignatura("Matematicas");
         Asignatura as2 = new Asignatura("Programacion");
 
-        curso.agregarAlumno(a1);
-        curso.agregarAlumno(a2);
-        curso.agregarProfesor(p1);
-        curso.agregarProfesor(p2);
+        curso.agregarAlumno((Alumno) a1);
+        curso.agregarAlumno((Alumno) a2);
+        curso.agregarProfesor((Profesor) p1);
+        curso.agregarProfesor((Profesor) p2);
         curso.agregarAsignatura(as1);
         curso.agregarAsignatura(as2);
 
         GestorMatriculas gestor = new GestorMatriculas();
 
-        gestor.crearMatricula(a1, as1, p1, 7);
-        gestor.crearMatricula(a1, as2, p2, 4);
-        gestor.crearMatricula(a2, as1, p1, 9);
+        gestor.crearMatricula((Alumno) a1, as1, (Profesor) p1, 7);
+        gestor.crearMatricula((Alumno) a1, as2, (Profesor) p2, 4);
+        gestor.crearMatricula((Alumno) a2, as1, (Profesor) p1, 9);
 
         curso.mostrarTodo();
 

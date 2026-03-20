@@ -4,22 +4,23 @@ import service.Matricula;
 
 import java.util.ArrayList;
 
-public class Alumno {
+public class Alumno extends Persona {
 
-    private String nombre;
     private int edad;
     private ArrayList<Matricula> matriculas;
 
     public Alumno(String nombre, int edad) {
-        this.nombre = nombre;
+        super(nombre);
         this.edad = edad;
         this.matriculas = new ArrayList<>();
     }
 
+    @Override
     public String getNombre() {
         return nombre;
     }
 
+    @Override
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
