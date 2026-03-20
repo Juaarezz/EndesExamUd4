@@ -1,10 +1,11 @@
 package model;
 
+import service.Informacion;
 import service.Matricula;
 
 import java.util.ArrayList;
 
-public class Alumno extends Persona {
+public class Alumno extends Persona implements Informacion {
 
     private int edad;
     private ArrayList<Matricula> matriculas;
@@ -45,7 +46,8 @@ public class Alumno extends Persona {
         matriculas.add(m);
     }
 
-    public void mostrarDatos() {
+    @Override
+    public void mostrarInformacion() {
         System.out.println("model.Alumno: " + nombre);
 
         for (Matricula m : matriculas) {

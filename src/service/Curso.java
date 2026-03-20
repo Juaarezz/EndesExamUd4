@@ -5,7 +5,7 @@ import model.Profesor;
 
 import java.util.ArrayList;
 
-public class Curso {
+public class Curso implements Informacion {
 
     private String nombre;
     private ArrayList<Alumno> alumnos;
@@ -31,7 +31,8 @@ public class Curso {
         profesores.add(p);
     }
 
-    public void mostrarTodo() {
+    @Override
+    public void mostrarInformacion() {
         System.out.println("CURSO: " + nombre);
 
         for (Alumno a : alumnos) {

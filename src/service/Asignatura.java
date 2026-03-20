@@ -1,6 +1,6 @@
 package service;
 
-public class Asignatura {
+public class Asignatura implements Informacion {
 
     private String nombre;
 
@@ -14,5 +14,10 @@ public class Asignatura {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("Asignatura: " + nombre);
     }
 }

@@ -1,6 +1,8 @@
 package model;
 
-public class Profesor extends Persona {
+import service.Informacion;
+
+public class Profesor extends Persona implements Informacion {
 
     private String especialidad;
 
@@ -27,7 +29,8 @@ public class Profesor extends Persona {
         this.especialidad = especialidad;
     }
 
-    public void mostrar() {
+    @Override
+    public void mostrarInformacion() {
         System.out.println("Profesor: " + nombre + " - " + especialidad);
     }
 }

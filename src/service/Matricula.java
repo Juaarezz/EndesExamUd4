@@ -3,7 +3,7 @@ package service;
 import model.Profesor;
 import model.Alumno;
 
-public class Matricula {
+public class Matricula implements Informacion {
 
     private Alumno alumno;
     private Asignatura asignatura;
@@ -49,7 +49,8 @@ public class Matricula {
         this.nota = nota;
     }
 
-    public void mostrar() {
+    @Override
+    public void mostrarInformacion() {
         System.out.println(alumno.getNombre() + " - " +
                 asignatura.getNombre() + " - " +
                 profesor.getNombre() + " - Nota: " + nota);
